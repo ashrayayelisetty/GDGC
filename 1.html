@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Platform</title>
+    <link rel="stylesheet" href="./1.css">
+</head>
+<body>
+    
+    <header>
+        <h1 id="heading1">E-Commerce Platform</h1>
+        <input type="text" id="searchInput" placeholder="Search products..." oninput="searchProducts()">
+    </header>
+
+    
+    <main>
+        <div class="cards" id="products-container">
+           </div>
+    </main>
+
+   
+    <h2 class="cart">Cart</h2>
+    <section class="section">
+       
+        <div class="items" id="cart-items">
+             </div>
+
+       
+        <div class="price-details">
+            <h3>Price Details</h3>
+            <p>Total MRP: ₹<span id="total-mrp">0</span></p>
+            <p>Coupon discount: ₹50</p>
+            <p>Platform fee: ₹10</p>
+            <p>Shipping charges: ₹20</p>
+            <p>Total Amount: ₹<span id="total-amount">0</span></p>
+            <button class="placeorder" onclick="placeOrder()">Place Order</button>
+        </div>
+    </section>
+
+    <script src="./1.js"></script>
+</body>
+</html>
