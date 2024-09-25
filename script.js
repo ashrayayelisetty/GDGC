@@ -18,7 +18,6 @@ function fetchProducts() {
 function displayProducts(productsList) {
     const container = document.getElementById("products-container");
     container.innerHTML = ""; // Clear previous products
-    
     productsList.forEach(product => {
         const productCard = `
             <div class="child">
@@ -106,5 +105,7 @@ function updatePriceDetails() {
 
 function searchProducts() {
     const query = document.getElementById("searchInput").value.toLowerCase();
-        const filteredProducts = products.filter(product)
+    const filteredProducts = products.filter(product => product.title.toLowerCase().includes(query));
+    
+    displayProducts(filteredProducts); // Re-render the product cards based on search results
 }
