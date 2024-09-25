@@ -8,44 +8,44 @@ Features:
 - Fetching: Fetches product data from an external API.
 
   
--Display: Displays products with images, titles, ratings, and prices.  
+- Display: Displays products with images, titles, ratings, and prices.  
 
 
--Adding products: Allows users to add products to a cart.
+- Adding products: Allows users to add products to a cart.
 
 
--Searh: Supports searching for products.
+- Searh: Supports searching for products.
 
--Quantity: Displays the cart with options to increase/decrease quantity or remove items.
+- Quantity: Displays the cart with options to increase/decrease quantity or remove items.
 
 
--Pricing details: Shows price details including total, platform fees, and shipping charges.
+- Pricing details: Shows price details including total, platform fees, and shipping charges.
 
 
 
 Technologies Used:
--HTML: Structure of the web pages.
+- HTML: Structure of the web pages.
 
 
--CSS: Styling of the application.
+- CSS: Styling of the application.
 
 
--JavaScript: Functionality and dynamic content handling.
+- JavaScript: Functionality and dynamic content handling.
 
 
--Fetch API: For fetching product data from an external source.
+- Fetch API: For fetching product data from an external source.
 
 File Structure:
 
-─ README.md          # Project documentation
+─  README.md          # Project documentation
 
 
-─ index.html         # Main HTML file
+─  index.html         # Main HTML file
 
 
-─ style.css          # CSS for styling
+─  style.css          # CSS for styling
 
 
-─ script.js          # JavaScript for functionality
+─  script.js          # JavaScript for functionality
 
 
