@@ -5,7 +5,9 @@ Overview:
 
 Features:
 - Fetching: Fetches product data from an external API.
--Display: Displays products with images, titles, ratings, and prices.
+
+  
+-Display: Displays products with images, titles, ratings, and prices.  
 -Adding products: Allows users to add products to a cart.
 -Searh: Supports searching for products.
 -Quantity: Displays the cart with options to increase/decrease quantity or remove items.
