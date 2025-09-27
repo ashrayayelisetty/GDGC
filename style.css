@@ -1,199 +1,361 @@
-*
-{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    /* Use a modern, widely available font */
+    font-family: 'Poppins', sans-serif; 
 }
-header{
-    display: flex;
-    background-color:  grey;
-    justify-content: space-between;
-}
-#heading1
-{
-   color: white;
-    padding: 10px;
-}
-#searchInput{
-    background-color: #e6e6fa ;
-    border-radius: 20px;
-    padding: 5px;
-}
-.child{
-    width:270px;
-    background-color: gray;
-    height: 370px;
-    border-radius: 20px;
-    margin: 10px;
 
+body {
+    /* Updated light background color */
+    background: #F4F7F6; 
+    /* Updated dark text color */
+    color: #2C3E50; 
+    line-height: 1.6;
 }
-img{
-    width: 100px;
-    height: 100px;
-    margin: 15px 15px 10px;
-    border-radius: 50px;
-    margin-left: 60px;
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Updated, more professional blue gradient */
+    background: linear-gradient(135deg, #007BFF, #0056B3); 
+    padding: 15px 40px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-.cards{
+
+#heading1 {
+    color: #fff;
+    font-size: 1.7rem; /* Slightly larger */
+    letter-spacing: 1px;
+    font-weight: 600; /* Medium-bold */
+}
+
+#searchInput {
+    padding: 10px 18px; /* More padding */
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    width: 250px; /* Slightly wider */
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    color: #2C3E50;
+}
+
+#searchInput::placeholder {
+    color: #7f8c8d; /* Placeholder color */
+}
+
+#searchInput:focus {
+    width: 320px;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Focus shadow */
+}
+
+/* Product Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Increased gap */
+    padding: 40px 20px;
+}
+
+.child {
+    background: #fff;
+    width: 280px; /* Slightly wider card */
+    height: auto;
+    border-radius: 12px;
+    padding: 25px; /* More padding */
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Refined shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #EAECEE; /* Subtle border */
+}
+
+.child:hover {
+    transform: translateY(-10px); /* More pronounced lift */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.child img {
+    width: 140px; /* Larger image */
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 3px solid #007BFF; /* Primary color ring around image */
+}
+
+.child p {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.child .price {
+    color: #FF5733; /* Accent color for price */
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.child button {
+    /* Primary blue color for action */
+    background: #007BFF; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.child button:hover {
+    /* Secondary accent color on hover */
+    background: #FF5733; 
+    transform: scale(1.05);
+}
+
+/* Cart Section */
+.cart {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 40px 0 20px 40px;
+    color: #007BFF; /* Primary blue for main heading */
+    border-bottom: 2px solid #EAECEE;
+    padding-bottom: 10px;
+}
+
+.section {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 40px;
-   
-    
+    padding: 20px 40px;
+    background: #F4F7F6; /* Maintaining the light background */
 }
-p{
-    text-align: center;
-    font-size: 20px;
-}
-button{
-    color: white;
-    margin: auto;
-    background-color: #6c6c6c;
-    padding: 6px;
-    border-radius: 20px;
-    margin-top: 15px;
-    margin-left: 80px;
-}
-.section{
-    background-color:  #c4c4c4;
-   justify-content: space-evenly;
-    display: flex;
-    
-  
-}
-.cart{
-    font-size: 2rem;
-    background-color: black;
-    color: white;
-    margin-top:20px ;
-  
 
+.items {
+    flex: 2; /* Give more space to items */
+    min-width: 400px;
+    padding-right: 30px; /* Space between items and details */
 }
-.items
-{
-    display: flex;
-    flex-direction: column;
-}
+
+/* Cart Item */
 .thing {
-    background-color: #e6e6fa;
-    padding: 10px;
-    border-radius: 7px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px; /* Increased padding */
+    margin: 15px 0;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 600px;
-    margin-top: 20px;
-    margin-left: 50px;
-    
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 5px solid #007BFF; /* Highlight with primary color */
 }
-.details{
-    display: flex;
-    flex-direction: column;
+
+.thing:hover {
+    transform: none; /* Removed scale for a cleaner look */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
-.details p{
-    width: 250px;
-    margin-left:15px;
+
+.thing img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
 }
-.price-details{
-    background-color: #e6e6fa;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    border: 1px solid black;
-    margin-top: 30px;
+
+.details {
+    flex-grow: 1; /* Use flex-grow for balanced space */
+    margin-left: 0;
 }
-.price-details p{
-    margin: 12px;
-    margin-left: 20px;
+
+.details p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #2C3E50;
 }
-.price-details button {
-    padding: 10px;
-    background-color: #6c6c6c;
-    color: white;
-    border: none;
-    border-radius: 5px;
+
+.details .item-price {
+    font-weight: 600;
+    color: #FF5733; /* Accent color for individual price */
 }
+
+/* Quantity buttons */
 .quantity {
     display: flex;
-   flex-direction: row;
-    column-gap: 0.1rem;
-    position: absolute;
-    left: 35rem;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.quantity span {
+    font-weight: 600;
 }
 
 .quantity button {
-    width: 25px;
-    height: 25px;
-    background-color: #ccc;
-    border: none;
-    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background: #EAECEE;
+    border: 1px solid #D5DBDB;
+    border-radius: 6px; /* Square buttons with subtle radius */
     font-weight: bold;
-    
+    font-size: 1.1rem;
+    color: #2C3E50;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
 }
-.remove{
-    background-color:  #6c6c6c;
+
+.quantity button:hover {
+    background: #007BFF;
+    color: #fff;
+}
+
+/* Remove button */
+.remove {
+    background: #FF5733; /* Using accent color for danger/remove */
+    color: #fff;
     border: none;
-    border-radius: 40%;
-    
+    border-radius: 6px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: background 0.3s ease;
 }
-.quantity>span{
-    position: relative;
-    top: 1rem;
-    left: 2rem;
+
+.remove:hover {
+    background: #D83B1A;
 }
-@media (max-width: 768px) {
-    .cards {
+
+/* Price Details */
+.price-details {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 350px; /* Slightly wider price details */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    border: 1px solid #EAECEE;
+}
+
+.price-details h3 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: #007BFF;
+    border-bottom: 1px solid #EAECEE;
+    padding-bottom: 10px;
+}
+
+.price-details p {
+    margin: 12px 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Highlighting the final total amount */
+.price-details .total-amount {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2C3E50;
+    border-top: 1px dashed #D5DBDB;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.price-details .total-amount span {
+    color: #FF5733; /* Accent color for the final price */
+    font-size: 1.2rem;
+}
+
+.price-details button {
+    width: 100%;
+    padding: 15px;
+    background: #FF5733; /* Using the accent color for the primary checkout button */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.price-details button:hover {
+    background: #D83B1A;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .section {
         flex-direction: column;
         align-items: center;
-        margin-top: 10px;
+        gap: 30px;
+        padding: 20px;
     }
 
-    .child {
-        width: 200px;
-        margin-top: 10px;
-    }
-
-    .thing {
-        width: 100%;
+    .items {
+        padding-right: 0;
     }
 
     .price-details {
         width: 100%;
-        max-width: 400px;
+        max-width: 450px;
     }
 }
 
-@media (max-width: 480px) {
-    .child {
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #heading1 {
+        font-size: 1.5rem;
+    }
+
+    #searchInput {
         width: 100%;
-        max-width: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    .cart {
+        margin-left: 20px;
+    }
+
+    .child {
+        width: 95%;
     }
 
     .thing {
-        width: 100%;
-        max-width: 300px;
+        flex-direction: column;
+        text-align: center;
     }
 
-    .price-details {
-        width: 100%;
-        padding: 10px;
+    .thing img {
+        margin-right: 0;
+        margin-bottom: 15px;
     }
 
-    .price-details button {
-        padding: 8px;
+    .details {
+        margin-bottom: 15px;
     }
 
-    img {
-        width: 80px;
-        height: 80px;
-    }
-
-    button {
+    .quantity {
         margin-left: 0;
-    }
-
-    p {
-        font-size: 16px;
+        margin-bottom: 15px;
     }
 }
